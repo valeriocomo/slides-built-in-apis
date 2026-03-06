@@ -8,8 +8,6 @@ transition: slide-up
 
 👨🏽‍💻 Technical Project Manager @ DTD
 
-📝 Tech writer
-
 🎤 Speaker
 
-<skill-icons-angular-light /> Developing web app with Angular since 2016
+📝 Tech writer

@@ -11,7 +11,24 @@ layout: intro-image
 image: '/images/cover.jpg'
 ---
 
-# Introduzione alle Built‑in APIs di Chrome
+# Introduzione alle Built‑in APIs
+
+<div class="absolute bottom-10">
+  <span class="font-700">
+    Valerio Como
+  </span>
+</div>
+
+<div class="abs-br m-6 text-xl">
+  <a href="https://github.com/valeriocomo/slides-built-in-apis" target="_blank" class="slidev-icon-btn">
+    <carbon:logo-github />
+  </a>
+</div>
+
+---
+src: ./pages/00-about-me.md
+transition: fade
+---
 
 ---
 
