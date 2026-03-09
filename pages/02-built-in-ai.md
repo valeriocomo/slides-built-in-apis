@@ -53,7 +53,7 @@ image: '/images/hybrid-client-server.png'
 ---
 
 # app ibride
-## cliend-side + server-side
+## client-side + server-side
 
 <v-clicks>
 
