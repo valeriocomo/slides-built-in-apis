@@ -31,6 +31,11 @@ transition: fade
 ---
 
 ---
+src: ./pages/01-agenda.md
+transition: fade
+---
+
+---
 
 ## 1.1 Che cosa sono le Built‑in APIs?
 
