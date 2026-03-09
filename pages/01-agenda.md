@@ -18,7 +18,7 @@ image: '/images/agenda.png'
 
 # agenda
 
-* cosa sono le built-in AI API
+* cosa é la built-in AI
 * anatomia delle API
 * case study
 * Q&A
