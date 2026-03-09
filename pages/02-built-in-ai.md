@@ -15,7 +15,7 @@ transition: slide-up
 layout: quote
 ---
 
-# Sono API della web platform e funzionalità dei browser progettate per lavorare con AI model, expert model e LLM, built-in nel browser
+# sono API della web platform e funzionalità dei browser progettate per lavorare con AI model, expert model e LLM, built-in nel browser
 
 ---
 layout: image
@@ -33,9 +33,35 @@ backgroundSize: contain
 
 <v-clicks>
 
-- **Deploy semplice**
+- **deploy semplice**
 
-- **Utilizzo di hardware locale (CPU/TPU/NPU)**
+- **utilizzo di hardware locale (CPU/TPU/NPU)**
+
+- **processing in locale di dati sensibili**
+
+- **offline-mode enabler**
+
+- **UX reattiva**
+
+- **app ibride**
+
+</v-clicks>
+
+---
+layout: image-right
+image: '/images/hybrid-client-server.png'
+---
+
+# app ibride
+## cliend-side & server-side
+
+<v-clicks>
+
+- **gestione della complessità**
+
+- **migliora la resilienza**
+
+- **meccanismi di fallback**
 
 </v-clicks>
 
