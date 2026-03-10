@@ -29,13 +29,14 @@ image: '/images/built-in-ai-architecture.png'
 backgroundSize: contain
 ---
 
-# Benefici
+# Client-side AI
+## Benefici
 
 <v-clicks>
 
 - **deploy semplice**
 
-- **utilizzo di hardware locale (CPU/TPU/NPU)**
+- **utilizzo di hardware locale (CPU/GPU/NPU)**
 
 - **processing in locale di dati sensibili**
 
@@ -65,6 +66,12 @@ image: '/images/hybrid-client-server.png'
 
 </v-clicks>
 
+---
+layout: section
+---
+
+# tutto molto bello, vero?
+
 
 ---
 layout: image
@@ -72,4 +79,23 @@ image: '/images/built-ai-apis-meme-1.jpg'
 backgroundSize: contain
 ---
 
+---
+layout: center
+---
+
+# standardizzazione delle API
+
+<div class="slidev-layout h-full grid section">
+    <div class="my-auto">
+<v-clicks>
+
+🤟​ primitive ideate dal team di Google Chrome
+
+🔍 W3C WebML Working Group
+
+​🫶​​ richiesta di feedback da W3C, Firefox, Webkit
+ 
+</v-clicks>  
+    </div>
+</div>
 
