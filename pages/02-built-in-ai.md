@@ -65,3 +65,11 @@ image: '/images/hybrid-client-server.png'
 
 </v-clicks>
 
+
+---
+layout: image
+image: '/images/built-ai-apis-meme-1.jpg'
+backgroundSize: contain
+---
+
+
