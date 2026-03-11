@@ -28,3 +28,7 @@
 - https://developer.chrome.com/docs/ai/debug-gemini-nano
 - https://developer.chrome.com/docs/ai/inform-users-of-model-download
 - https://developer.chrome.com/docs/ai/understand-built-in-model-management
+- https://github.com/webmachinelearning/translation-api
+- https://github.com/webmachinelearning/proofreader-api
+- https://github.com/webmachinelearning/writing-assistance-apis
+- https://github.com/webmachinelearning/prompt-api

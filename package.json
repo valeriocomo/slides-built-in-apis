@@ -15,5 +15,8 @@
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
     "vue": "^3.5.26"
+  },
+  "devDependencies": {
+    "@iconify-json/logos": "^1.2.10"
   }
 }
