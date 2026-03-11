@@ -122,7 +122,7 @@ layout: center
 <logos-w3c /> W3C WebML Working Group
 </p>
 
-🫶​​ richiesta di feedback a W3C, Firefox, Webkit
+🔍​​​ richiesta di feedback a W3C, Firefox, Webkit
  
 </v-clicks>  
     </div>
