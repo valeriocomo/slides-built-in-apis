@@ -32,17 +32,41 @@ backgroundSize: contain
 # Client-side AI
 ## Benefici
 
+### PLOC
+
 <v-clicks>
 
-- **deploy semplice**
+- **P**rivacy
 
-- **utilizzo di hardware locale (CPU/GPU/NPU)**
+- **L**ow latency
+
+- **O**ffline access
+
+- **C**ost effectiveness
+
+</v-clicks>
+
+---
+layout: image-left
+image: '/images/built-in-ai-architecture.png'
+backgroundSize: contain
+transition: none
+---
+
+# Client-side AI
+## Benefici
+
+<v-clicks>
 
 - **processing in locale di dati sensibili**
 
+- **UX reattiva**
+
 - **offline-mode enabler**
 
-- **UX reattiva**
+- **utilizzo di hardware locale (CPU/GPU/NPU)**
+
+- **deploy semplice**
 
 - **app ibride**
 
@@ -87,13 +111,18 @@ layout: center
 
 <div class="slidev-layout h-full grid section">
     <div class="my-auto">
+
 <v-clicks>
 
-🤟​ primitive ideate dal team di Google Chrome
+<p>
+<logos-chrome />​ primitive ideate dal team di Google Chrome
+</p>
 
-🔍 W3C WebML Working Group
+<p>
+<logos-w3c /> W3C WebML Working Group
+</p>
 
-​🫶​​ richiesta di feedback da W3C, Firefox, Webkit
+🫶​​ richiesta di feedback a W3C, Firefox, Webkit
  
 </v-clicks>  
     </div>
