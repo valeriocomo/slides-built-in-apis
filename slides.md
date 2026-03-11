@@ -9,6 +9,10 @@ drawings:
 transition: slide-left
 layout: intro-image
 image: '/images/cover.jpg'
+fonts:
+  sans: Roboto
+  serif: Roboto Serif
+  mono: Roboto Mono
 ---
 
 # Introduzione alle Built‑in APIs
@@ -37,6 +41,11 @@ transition: fade
 
 ---
 src: ./pages/02-built-in-ai.md
+transition: fade
+---
+
+---
+src: ./pages/03-apis.md
 transition: fade
 ---
 
