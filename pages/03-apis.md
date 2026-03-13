@@ -31,8 +31,8 @@ layout: default
 |-----|-------|
 | **Translator API** | Traduzione in tempo reale |
 | **Language Detection API** | Rileva lingua di input |
-| **Prompt API** | Invia prompt in linguaggio naturale |
 | **Summarizer API** | Riassume testi lunghi con pochi prompt |
+| **Prompt API** | Invia prompt in linguaggio naturale |
 | **Writer API** | Genera testo in stile editor | 
 | **Rewriter API** | Rephrase e miglioramento |
 | **Proofreader API** | Correggi grammatica e stile |
@@ -64,10 +64,10 @@ layout: default
 | Translator API         | Expert Model    | Text → Text |
 | Language Detector API  | Expert Model    | Text → Text |
 | Summarizer API         | Language Model  | Text → Text |
+| Prompt API             | Language Model  | Multimodal  |
 | Writer API             | Language Model  | Text → Text |
 | Rewriter API           | Language Model  | Text → Text |
 | Proofreader API        | Language Model  | Text → Text |
-| Prompt API             | Language Model  | Multimodal  |
 
 
 ---
@@ -83,10 +83,10 @@ backgroundSize: contain
 | Translator API         | ❌​              | ✅​           |
 | Language Detector API  | ❌​              | ✅​           |
 | Summarizer API         | ❌​              | ✅​           |
+| Prompt API             | ❌​              | ✅​           |
 | Writer API             | ❌​              | ✅​           |
 | Rewriter API           | ❌​              | ✅​           |
 | Proofreader API        | ❌​              | ✅​           |
-| Prompt API             | ❌​              | ✅​           |
 
 ---
 layout: image-right
