@@ -30,7 +30,7 @@ layout: default
 | **API** | **Scopo** | 
 |-----|-------|
 | **Translator API** | Traduzione in tempo reale |
-| **Language Detection** | Rileva lingua di input |
+| **Language Detection API** | Rileva lingua di input |
 | **Prompt API** | Invia prompt in linguaggio naturale |
 | **Summarizer API** | Riassume testi lunghi con pochi prompt |
 | **Writer API** | Genera testo in stile editor | 
@@ -45,3 +45,59 @@ backgroundSize: contain
 
 # Anatomia delle API
 ## Stato delle API
+
+---
+layout: section
+---
+
+# Requisiti
+
+---
+layout: default
+backgroundSize: contain
+---
+
+# Anatomia delle API
+## Modelli
+
+| API                    | Model Type      | Modality    |
+|------------------------|-----------------|-------------|
+| Translator API         | Expert Model    | Text → Text |
+| Language Detector API  | Expert Model    | Text → Text |
+| Summarizer API         | Language Model  | Text → Text |
+| Writer API             | Language Model  | Text → Text |
+| Rewriter API           | Language Model  | Text → Text |
+| Proofreader API        | Language Model  | Text → Text |
+| Prompt API             | Language Model  | Multimodal  |
+
+
+---
+layout: default
+backgroundSize: contain
+---
+
+# Anatomia delle API
+## Supporto software
+
+| API                    | Mobile          | Desktop      |
+|------------------------|-----------------|--------------|
+| Translator API         | ❌​              | ✅​           |
+| Language Detector API  | ❌​              | ✅​           |
+| Summarizer API         | ❌​              | ✅​           |
+| Writer API             | ❌​              | ✅​           |
+| Rewriter API           | ❌​              | ✅​           |
+| Proofreader API        | ❌​              | ✅​           |
+| Prompt API             | ❌​              | ✅​           |
+
+---
+layout: image-right
+image: '/images/apis-hardware-req.avif'
+backgroundSize: contain
+---
+
+# Anatomia delle API
+## Supporto hardware
+
+- GPU (+4GB RAM)
+
+- CPU (+16GB RAM & 4 CPU)
