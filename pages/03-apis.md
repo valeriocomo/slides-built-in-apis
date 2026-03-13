@@ -27,15 +27,15 @@ layout: default
 | **Rewriter API** | Rephrase e miglioramento | <https://developer.chrome.com/docs/ai/rewriter-api> |
 | **Proofreader API** | Correggi grammatica e stile | <https://developer.chrome.com/docs/ai/proofreader-api> | -->
 
-| **API** | **Scopo** | 
-|-----|-------|
-| **Translator API** | Traduzione in tempo reale |
-| **Language Detection API** | Rileva lingua di input |
-| **Summarizer API** | Riassume testi lunghi con pochi prompt |
-| **Prompt API** | Invia prompt in linguaggio naturale |
-| **Writer API** | Genera testo in stile editor | 
-| **Rewriter API** | Rephrase e miglioramento |
-| **Proofreader API** | Correggi grammatica e stile |
+| **API** | **Scopo** | **Spec** | 
+|---------|-----------|----------|
+| **Translator API** | Traduzione in tempo reale | Translation API |
+| **Language Detection API** | Rileva lingua di input | Translation API |
+| **Summarizer API** | Riassume testi lunghi con pochi prompt | Writing Assistance API |
+| **Writer API** | Genera testo in stile editor | Writing Assistance API |
+| **Rewriter API** | Rephrase e miglioramento | Writing Assistance API |
+| **Prompt API** | Invia prompt in linguaggio naturale | Prompt API |
+| **Proofreader API** | Correggi grammatica e stile | Proofreader API |
 
 ---
 layout: image
@@ -64,9 +64,9 @@ layout: default
 | Translator API         | Expert Model    | Text → Text |
 | Language Detector API  | Expert Model    | Text → Text |
 | Summarizer API         | Language Model  | Text → Text |
-| Prompt API             | Language Model  | Multimodal  |
 | Writer API             | Language Model  | Text → Text |
 | Rewriter API           | Language Model  | Text → Text |
+| Prompt API             | Language Model  | Multimodal  |
 | Proofreader API        | Language Model  | Text → Text |
 
 
@@ -83,9 +83,9 @@ backgroundSize: contain
 | Translator API         | ❌​              | ✅​           |
 | Language Detector API  | ❌​              | ✅​           |
 | Summarizer API         | ❌​              | ✅​           |
-| Prompt API             | ❌​              | ✅​           |
 | Writer API             | ❌​              | ✅​           |
 | Rewriter API           | ❌​              | ✅​           |
+| Prompt API             | ❌​              | ✅​           |
 | Proofreader API        | ❌​              | ✅​           |
 
 ---
@@ -100,3 +100,19 @@ backgroundSize: contain
 - GPU (+4GB RAM)
 
 - CPU (+16GB RAM & 4 CPU)
+
+---
+layout: section
+---
+
+# Translation API 
+
+---
+layout: default
+---
+
+# Translation API 
+
+- Translator API
+
+- Language Detector API
