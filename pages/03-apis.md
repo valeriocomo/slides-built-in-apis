@@ -112,7 +112,77 @@ layout: default
 ---
 
 # Translation API 
+## Translator API
+### Esempio
 
-- Translator API
+````md magic-move
 
-- Language Detector API
+```javascript
+'Translator' in self
+// true
+```
+
+```javascript
+const translatorCapabilities = await Translator.availability({
+  sourceLanguage: 'it',
+  targetLanguage: 'es',
+});
+// 'available'
+// 'unavailable'
+// 'downloadable'
+// 'downloading'
+```
+
+```javascript
+const translator = await Translator.create({
+  sourceLanguage: 'it'
+  targetLanguage: 'es',
+});
+```
+
+```javascript
+await translator.translate('Saluti da Corralejo');
+// "Saludos desde Corralejo"
+```
+
+```javascript
+const translatorCapabilities = await Translator.availability({
+  sourceLanguage: 'it'
+  targetLanguage: 'es',
+});
+
+const translator = await Translator.create({
+  sourceLanguage: 'it'
+  targetLanguage: 'es',
+});
+
+await translator.translate('Saluti da Corralejo');
+// "Saludos desde Corralejo"
+```
+
+````
+
+---
+layout: default
+---
+
+# Translation API 
+## Translator API
+### Esempio con Stream
+
+```javascript
+const stream = translator.translateStreaming(longText);
+for await (const chunk of stream) {
+  console.log(chunk);
+}
+```
+
+---
+layout: default
+---
+
+# Translation API 
+## Translator API
+### Pro tip
+
+Mostra sempre un loader nella UI quando usi chiami il metodo ```.translate```
