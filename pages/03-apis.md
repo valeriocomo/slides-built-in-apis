@@ -54,7 +54,6 @@ layout: section
 
 ---
 layout: default
-backgroundSize: contain
 ---
 
 # Anatomia delle API
