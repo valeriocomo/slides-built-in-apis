@@ -292,3 +292,63 @@ layout: default
 # Writing Assistance API 
 ## Summarizer API
 ### Esempio
+
+````md magic-move
+
+```javascript
+'Summarizer' in self
+// true
+```
+
+```javascript
+const availability = await Summarizer.availability();
+// 'available'
+// 'unavailable'
+// 'downloadable'
+// 'downloading'
+```
+
+```javascript
+const summarizer = await Summarizer.create();
+```
+
+```javascript
+const summarizer = await Summarizer.create({
+  type: 'key-points', // key-points | tldr | teaser | headline
+  format: 'markdown', // markdown | plainText
+  length: 'medium', // short | medium | long
+  sharedContext: 'This is article about american pro basketball. The users expect to a response in Spanish',
+});
+```
+
+```javascript
+const summarizer = await Summarizer.create({
+  type: 'key-points', // key-points | tldr | teaser | headline
+  format: 'markdown', // markdown | plainText
+  length: 'medium', // short | medium | long
+  sharedContext: 'This is article about american pro basketball. The users expect to a response in Spanish',
+  expectedInputLanguages: ['en', 'ja', 'es'],
+  outputLanguage: 'es',
+  expectedContextLanguages: ['en'],
+});
+```
+
+```javascript
+const longText = document.querySelector('article').innerHTML;
+const summary = await summarizer.summarize(longText, {
+  context: 'This article is intended for readers who are familiar with American professional basketball',
+});
+```
+
+```javascript
+const longText = document.querySelector('article').innerHTML;
+const stream = await summarizer.summarizeStream(longText, {
+  context: 'This article is intended for readers who are familiar with American professional basketball',
+});
+
+for await (const chunk of stream) {
+  console.log(chunk);
+}
+```
+
+````
