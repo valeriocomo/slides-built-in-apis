@@ -335,6 +335,11 @@ const summarizer = await Summarizer.create({
 
 ```javascript
 const longText = document.querySelector('article').innerHTML;
+const summary = await summarizer.summarize(longText);
+```
+
+```javascript
+const longText = document.querySelector('article').innerHTML;
 const summary = await summarizer.summarize(longText, {
   context: 'This article is intended for readers who are familiar with American professional basketball',
 });
@@ -352,3 +357,77 @@ for await (const chunk of stream) {
 ```
 
 ````
+---
+layout: default
+---
+
+# Writing Assistance API 
+## Summarizer API
+### Configurazione - type
+
+| Type        | Significato                                                                                                              |
+|-------------|--------------------------------------------------------------------------------------------------------------------------|
+| "tldr"      | Il riepilogo dovrebbe essere breve e diretto, fornendo una rapida panoramica dell'input, adatta a un lettore impegnato. |
+| "teaser"    | Il riepilogo dovrebbe concentrarsi sulle parti più interessanti o intriganti dell'input, progettato per invogliare il lettore a continuare la lettura. |
+| "key points"| Il riepilogo dovrebbe estrarre i punti più importanti dall'input, presentandoli come elenco puntato.                   |
+| "headline"  | Il riepilogo dovrebbe contenere efficacemente il punto principale dell'input in una singola frase, nel formato di un titolo di articolo. |
+
+---
+layout: default
+---
+
+# Writing Assistance API 
+## Summarizer API
+### Configurazione - type & length
+
+| Type        | Lunghezza  | Output             |
+|-------------|------------|--------------------|
+| "tldr"      |  breve     | 1 frase            |
+| "tldr"      |  medio     | 3 frasi            |
+| "tldr"      |  lungo     | 5 frasi            |
+| "teaser"    |  breve     | 1 frase            |
+| "teaser"    |  medio     | 3 frasi            |
+| "teaser"    |  lungo     | 5 frasi            |
+
+---
+layout: default
+---
+
+# Writing Assistance API 
+## Summarizer API
+### Configurazione - type & length
+
+| Type        | Lunghezza  | Output             |
+|-------------|------------|--------------------|
+| "key-points"|  breve     | 3 punti elenco     |
+| "key-points"|  medio     | 5 punti elenco     |
+| "key-points"|  lungo     | 7 punti elenco     |
+| "headline"  |  breve     | 12 parole          |
+| "headline"  |  medio     | 17 parole          |
+| "headline"  |  lungo     | 22 parole          |
+
+---
+layout: default
+---
+
+# Translation API
+## Language Detector API
+### Security & Policy
+
+<v-clicks>
+
+- Non è supportato nei Web Worker
+
+- top-level window (no cross-origin)
+
+- configurazione permessi per iframe (cross-origin)
+
+</v-clicks>
+
+<v-after>
+
+```html
+<iframe src="https://cross-origin.example.com/" allow="summarizer"></iframe>
+```
+
+</v-after>
