@@ -186,3 +186,69 @@ layout: default
 ### Pro tip
 
 Mostra sempre un loader nella UI quando usi chiami il metodo ```.translate```
+
+
+---
+layout: default
+---
+
+# Translation API 
+## Language Detector API
+### Esempio
+
+````md magic-move
+
+```javascript
+'LanguageDetector' in self
+// true
+```
+
+```javascript
+const detector = await LanguageDetector.create();
+```
+
+```javascript
+const detector = await LanguageDetector.create({
+  monitor(m) {
+    m.addEventListener('downloadprogress', (e) => {
+      console.log(`Downloaded ${e.loaded * 100}%`);
+    });
+  },
+});
+```
+
+```javascript
+const text = 'Saludos desde Corralejo';
+const results = await detector.detect(text);
+
+for (const result of results) {
+  console.log(result.detectedLanguage, result.confidence);
+}
+// Output:
+// es 0.9882242679595947
+// gl 0.00650646910071373
+// und 0.000003673242190416204
+```
+
+```javascript
+const detector = await LanguageDetector.create({
+  monitor(m) {
+    m.addEventListener('downloadprogress', (e) => {
+      console.log(`Downloaded ${e.loaded * 100}%`);
+    });
+  },
+});
+
+const text = 'Saludos desde Corralejo';
+const results = await detector.detect(text);
+
+for (const result of results) {
+  console.log(result.detectedLanguage, result.confidence);
+}
+// Output:
+// es 0.9882242679595947
+// gl 0.00650646910071373
+// und 0.000003673242190416204
+```
+
+````
