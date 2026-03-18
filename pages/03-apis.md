@@ -644,4 +644,149 @@ layout: default
 <iframe src="https://cross-origin.valeriocomo.dev/" allow="writer"></iframe>
 ```
 
-</v-click>
+</v-after>
+
+---
+layout: default
+---
+
+# Writing Assistance API 
+## Rewriter API
+### Setup
+
+Abilitare i seguenti flag
+
+```text
+chrome://flags/#optimization-guide-on-device-model
+```
+```text
+chrome://flags/#prompt-api-for-gemini-nano-multimodal-input
+```
+```text
+chrome://flags/#writer-api-for-gemini-nano
+```
+
+---
+layout: default
+---
+
+# Writing Assistance API 
+## Rewriter API
+### Esempio
+
+````md magic-move
+
+```javascript
+'Rewriter' in self
+```
+
+```javascript
+const availability = await Rewriter.availability();
+```
+
+```javascript
+const rewriter = await Rewriter.create();
+```
+
+```javascript
+const rewriter = await Rewriter.create({
+  sharedContext: 'These are request of rephrasing a sentence.',
+  tone: 'casual', // neutral | formal | casual
+  format: 'plain-text',  // plain-text | markdown
+  length: 'medium', // short | medium | long
+});
+```
+
+```javascript
+const rewriter = await Rewriter.create({
+  sharedContext: 'These are request of rephrasing a sentence.',
+  tone: 'casual', // neutral | formal | casual
+  format: 'plain-text',  // plain-text | markdown
+  length: 'medium', // short | medium | long
+  expectedInputLanguages: ["en", "ja", "es"],
+  expectedContextLanguages: ["en", "ja", "es"],
+  outputLanguage: "en",
+});
+```
+
+```javascript
+const result = await rewriter.rewrite(
+  text,
+  {
+    context: "Use a polite tone",
+  },
+);
+```
+
+```javascript
+const availability = await Rewriter.availability();
+
+const rewriter = await Rewriter.create({
+  sharedContext: 'These are request of rephrasing a sentence.',
+  tone: 'casual', // neutral | formal | casual
+  format: 'plain-text',  // plain-text | markdown
+  length: 'medium', // short | medium | long
+  expectedInputLanguages: ["en", "ja", "es"],
+  expectedContextLanguages: ["en", "ja", "es"],
+  outputLanguage: "en",
+});
+
+const result = await rewriter.rewrite(
+  text,
+  {
+    context: "Use a polite tone",
+  },
+);
+```
+
+```javascript
+const availability = await Rewriter.availability();
+
+const rewriter = await Rewriter.create({
+  sharedContext: 'These are request of rephrasing a sentence.',
+  tone: 'casual', // neutral | formal | casual
+  format: 'plain-text',  // plain-text | markdown
+  length: 'medium', // short | medium | long
+  expectedInputLanguages: ["en", "ja", "es"],
+  expectedContextLanguages: ["en", "ja", "es"],
+  outputLanguage: "en",
+});
+
+const stream = await rewriter.rewriteStreaming(
+  text,
+  {
+    context: "Use a polite tone",
+  },
+);
+
+for await (const chunk of stream) {
+  console.log(chunk)
+}
+```
+
+````
+---
+layout: default
+---
+
+# Writing Assistance API 
+## Rewriter API
+### Pro tip
+
+<v-clicks>
+
+- Non è supportato nei Web Worker
+
+- top-level window (no cross-origin)
+
+- configurazione permessi per iframe (cross-origin)
+
+</v-clicks>
+
+<v-after>
+
+```html
+<iframe src="https://cross-origin.valeriocomo.dev/" allow="rewriter"></iframe>
+```
+
+</v-after>
