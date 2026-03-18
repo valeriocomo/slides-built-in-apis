@@ -790,3 +790,11 @@ layout: default
 ```
 
 </v-after>
+
+<!-- 
+
+layout: iframe
+url: https://chrome.dev/web-ai-demos/writer-rewriter-api-playground/
+allow: "writer,rewriter"
+
+-->
