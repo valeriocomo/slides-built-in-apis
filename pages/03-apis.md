@@ -485,3 +485,163 @@ await summarizer.inputQuota
 ```
 
 </v-click>
+
+---
+layout: default
+---
+
+# Writing Assistance API 
+## Writer API
+### Setup
+
+Abilitare i seguenti flag
+
+```text
+chrome://flags/#optimization-guide-on-device-model
+```
+```text
+chrome://flags/#prompt-api-for-gemini-nano-multimodal-input
+```
+```text
+chrome://flags/#writer-api-for-gemini-nano
+```
+
+
+---
+layout: default
+---
+
+# Writing Assistance API 
+## Writer API
+### Esempio
+
+````md magic-move
+
+```javascript
+'Writer' in self
+```
+
+```javascript
+const availability = await Writer.availability();
+```
+
+```javascript
+const writer = await Writer.create();
+```
+
+```javascript
+const writer = await Writer.create({
+  sharedContext: 'This is an email asking about the price of a car.',
+  tone: 'casual', // neutral | formal | casual
+  format: 'plain-text',  // plain-text | markdown
+  length: 'medium', // short | medium | long
+});
+```
+
+```javascript
+const writer = await Writer.create({
+  sharedContext: 'This is an email asking about the price of a car.',
+  tone: 'casual', // neutral | formal | casual
+  format: 'plain-text',  // plain-text | markdown
+  length: 'medium', // short | medium | long
+  expectedInputLanguages: ["en", "ja", "es"],
+  expectedContextLanguages: ["en", "ja", "es"],
+  outputLanguage: "en",
+});
+```
+
+```javascript
+const result = await writer.write(
+  "An inquiry to a car dealer about the price of a car in stock.",
+  {
+    context: "I'm a new customer",
+  },
+);
+/*
+Subject: Inquiry Regarding Vehicle Price
+
+Dear [Dealership Name],
+
+I am interested in the [Year] [Make] [Model] currently listed on your website. 
+Could you please provide the price for this vehicle, including any applicable taxes and fees? 
+Thank you for your time and assistance.
+
+Sincerely,
+
+[Your Name]
+[Your Phone Number]
+*/
+```
+
+```javascript
+const availability = await Writer.availability();
+
+const writer = await Writer.create({
+  sharedContext: 'This is an email asking about the price of a car.',
+  tone: 'casual', // neutral | formal | casual
+  format: 'plain-text',  // plain-text | markdown
+  length: 'medium', // short | medium | long
+  expectedInputLanguages: ["en", "ja", "es"],
+  expectedContextLanguages: ["en", "ja", "es"],
+  outputLanguage: "en",
+});
+
+const result = await writer.write(
+  "An inquiry to a car dealer about the price of a car in stock.",
+  {
+    context: "I'm a new customer",
+  },
+);
+```
+
+```javascript
+const availability = await Writer.availability();
+
+const writer = await Writer.create({
+  sharedContext: 'This is an email asking about the price of a car.',
+  tone: 'casual', // neutral | formal | casual
+  format: 'plain-text',  // plain-text | markdown
+  length: 'medium', // short | medium | long
+  expectedInputLanguages: ["en", "ja", "es"],
+  expectedContextLanguages: ["en", "ja", "es"],
+  outputLanguage: "en",
+});
+
+const stream = await writer.writeStreaming(
+  "An inquiry to a car dealer about the price of a car in stock.",
+  {
+    context: "I'm a new customer",
+  },
+);
+
+for await (const chunk of stream) {
+  console.log(chunk)
+}
+```
+
+````
+---
+layout: default
+---
+
+# Writing Assistance API 
+## Writer API
+### Pro tip
+
+<v-clicks>
+
+- Non è supportato nei Web Worker
+
+- top-level window (no cross-origin)
+
+- configurazione permessi per iframe (cross-origin)
+
+</v-clicks>
+
+<v-after>
+
+```html
+<iframe src="https://cross-origin.valeriocomo.dev/" allow="writer"></iframe>
+```
+
+</v-click>
