@@ -850,3 +850,7 @@ Then slips away, a silent fall,
 Joining the stream, answering the call.
 */
 ```
+
+<!-- aggiungere initial Prompts when create a session context -->
+<!-- aggiungere multimodal capabilities -->
+<!-- aggiungere discorso sessione -->
