@@ -798,3 +798,55 @@ url: https://chrome.dev/web-ai-demos/writer-rewriter-api-playground/
 allow: "writer,rewriter"
 
 -->
+
+---
+layout: section
+---
+
+# Prompt API 
+
+---
+layout: default
+---
+
+# Prompt API 
+### Setup
+
+```text
+chrome://flags/#optimization-guide-on-device-model
+```
+
+```text
+chrome://flags/#prompt-api-for-gemini-nano-multimodal-input
+```
+
+
+---
+layout: default
+---
+
+# Prompt API 
+### Esempio
+
+```javascript
+const available = await LanguageModel.availability({
+  expectedInputs: [{type: 'text', languages: ['en']}],
+  expectedOutputs: [{type: 'text', languages: ['en']}],
+});
+
+const session = await LanguageModel.create();
+
+// Prompt the model and wait for the whole result to come back.
+const result = await session.prompt('Write me a short poem!');
+console.log(result);
+
+/*
+A single raindrop, cool and clear,
+Reflects the sky, dispelling fear.
+A tiny jewel, a fleeting grace,
+Washing worries from time and space. 
+
+Then slips away, a silent fall,
+Joining the stream, answering the call.
+*/
+```
