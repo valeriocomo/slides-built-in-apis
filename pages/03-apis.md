@@ -274,7 +274,7 @@ layout: default
 <v-after>
 
 ```html
-<iframe src="https://cross-origin.example.com/" allow="language-detector"></iframe>
+<iframe src="https://cross-origin.valeriocomo.dev/" allow="language-detector"></iframe>
 ```
 
 </v-after>
@@ -394,10 +394,10 @@ layout: default
 
 | Type        | Significato                                                                                                              |
 |-------------|--------------------------------------------------------------------------------------------------------------------------|
-| tldr      | Il riepilogo dovrebbe essere breve e diretto, fornendo una rapida panoramica dell'input, adatta a un lettore impegnato. |
-| teaser    | Il riepilogo dovrebbe concentrarsi sulle parti più interessanti o intriganti dell'input, progettato per invogliare il lettore a continuare la lettura. |
-| key points| Il riepilogo dovrebbe estrarre i punti più importanti dall'input, presentandoli come elenco puntato.                   |
-| headline  | Il riepilogo dovrebbe contenere efficacemente il punto principale dell'input in una singola frase, nel formato di un titolo di articolo. |
+| tldr        | Riepilogo breve e diretto, fornisce una rapida panoramica dell'input |
+| teaser      | Riepilogo delle parti più interessanti o intriganti dell'input, progettato per invogliare il lettore a continuare la lettura. |
+| key points. | Riepilogo deii punti più importanti dall'input, presentandoli come elenco puntato.                   |
+| headline    | Riepilogo che contiene il punto principale dell'input in una singola frase, nel formato di un titolo di articolo. |
 
 ---
 layout: default
@@ -454,7 +454,7 @@ layout: default
 <v-after>
 
 ```html
-<iframe src="https://cross-origin.example.com/" allow="summarizer"></iframe>
+<iframe src="https://cross-origin.valeriocomo.dev/" allow="summarizer"></iframe>
 ```
 
 </v-after>
