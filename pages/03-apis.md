@@ -897,10 +897,6 @@ const options = {
 const available = await LanguageModel.availability(options);
 
 const session = await LanguageModel.create(options);
-
-// Prompt the model and wait for the whole result to come back.
-const result = await session.prompt('Write me a short poem!');
-console.log(result);
 ```
 
 ```javascript
@@ -958,6 +954,9 @@ const session = await LanguageModel.create({
     { role: 'assistant', content: 'No.'}
   ]
 });
+
+const response = await session.prompt('Is Monet an impressionist artist? Answer just yer or no')
+//yes
 ```
 
 ````
