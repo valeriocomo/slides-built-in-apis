@@ -959,6 +959,109 @@ const response = await session.prompt('Is Monet an impressionist artist? Answer 
 //yes
 ```
 
+```javascript
+const options = {
+  expectedInputs: [
+    {type: 'text', languages: ['en', 'ja', 'es']},
+    {type: 'image'},
+    {type: 'audio'},
+  ],
+  expectedOutputs: [{type: 'text', languages: ['en']}],
+};
+
+const available = await LanguageModel.availability(options);
+
+const session = await LanguageModel.create({
+  ...options,
+   initialPrompts: [
+    { role: 'system', content: 'You are a fine-art critique' },
+    { role: 'user', content: 'Is impressionism the best movement ever? Answer just yer or no' },
+    { role: 'assistant', content: 'No.'}
+  ]
+});
+
+const response = await session.prompt([{
+  role: 'user'
+  content: [
+  {
+    type: 'text',
+    value: `Here's one image. Notes: ${fileNotesInput.value}`,
+  },
+  { type: 'image', value: fileUpload.files[0] },
+],
+}])
+```
+
+```javascript
+const options = {
+  expectedInputs: [
+    {type: 'text', languages: ['en', 'ja', 'es']},
+    {type: 'image'},
+    {type: 'audio'},
+  ],
+  expectedOutputs: [{type: 'text', languages: ['en']}],
+};
+
+const available = await LanguageModel.availability(options);
+
+const session = await LanguageModel.create({
+  ...options,
+   initialPrompts: [
+    { role: 'system', content: 'You are a fine-art critique' },
+    { role: 'user', content: 'Is impressionism the best movement ever? Answer just yer or no' },
+    { role: 'assistant', content: 'No.'}
+  ]
+});
+
+const canvas = document.querySelector("canvas");
+
+const response = await session.prompt([{
+  role: 'user'
+  content: [
+  {
+    type: 'text',
+    value: `Express a fine-art critique about this image`,
+  },
+  { type: 'image', value: canvas },
+],
+}])
+```
+
+```javascript
+const options = {
+  expectedInputs: [
+    {type: 'text', languages: ['en', 'ja', 'es']},
+    {type: 'image'},
+    {type: 'audio'},
+  ],
+  expectedOutputs: [{type: 'text', languages: ['en']}],
+};
+
+const available = await LanguageModel.availability(options);
+
+const session = await LanguageModel.create({
+  ...options,
+   initialPrompts: [
+    { role: 'system', content: 'You are a fine-art critique' },
+    { role: 'user', content: 'Is impressionism the best movement ever? Answer just yer or no' },
+    { role: 'assistant', content: 'No.'}
+  ]
+});
+
+const image = await (await fetch("impressionism-sol-levant.jpeg")).blob();
+
+const response = await session.prompt([{
+  role: 'user'
+  content: [
+  {
+    type: 'text',
+    value: `Express a fine-art critique about this image`,
+  },
+  { type: 'image', value: image },
+],
+}])
+```
+
 ````
 
 <!-- aggiungere initial Prompts when create a session context -->
