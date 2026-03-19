@@ -1,6 +1,6 @@
 ---
 layout: image
-image: '/images/apis-cover.jpg'
+image: '/images/apis-cover.jag'
 preload: true
 transition: slide-up
 ---
@@ -828,6 +828,8 @@ layout: default
 # Prompt API 
 ### Esempio
 
+````md magic-move
+
 ```javascript
 const available = await LanguageModel.availability({
   expectedInputs: [{type: 'text', languages: ['en']}],
@@ -851,6 +853,116 @@ Joining the stream, answering the call.
 */
 ```
 
+```javascript
+const available = await LanguageModel.availability({
+  expectedInputs: [{type: 'text', languages: ['en']}],
+  expectedOutputs: [{type: 'text', languages: ['en']}],
+});
+
+const session = await LanguageModel.create();
+
+// Prompt the model and wait for the whole result to come back.
+const result = await session.prompt('Write me a short poem!');
+console.log(result);
+```
+
+
+```javascript
+const available = await LanguageModel.availability({
+  expectedInputs: [
+    {type: 'text', languages: ['en', 'ja', 'es']},
+    {type: 'image'},
+    {type: 'audio'},
+  ],
+  expectedOutputs: [{type: 'text', languages: ['en']}],
+});
+
+const session = await LanguageModel.create();
+
+// Prompt the model and wait for the whole result to come back.
+const result = await session.prompt('Write me a short poem!');
+console.log(result);
+```
+
+```javascript
+const options = {
+  expectedInputs: [
+    {type: 'text', languages: ['en', 'ja', 'es']},
+    {type: 'image'},
+    {type: 'audio'},
+  ],
+  expectedOutputs: [{type: 'text', languages: ['en']}],
+};
+
+const available = await LanguageModel.availability(options);
+
+const session = await LanguageModel.create(options);
+
+// Prompt the model and wait for the whole result to come back.
+const result = await session.prompt('Write me a short poem!');
+console.log(result);
+```
+
+```javascript
+const options = {
+  expectedInputs: [
+    {type: 'text', languages: ['en', 'ja', 'es']},
+    {type: 'image'},
+    {type: 'audio'},
+  ],
+  expectedOutputs: [{type: 'text', languages: ['en']}],
+};
+
+const available = await LanguageModel.availability(options);
+
+const session = await LanguageModel.create(options);
+```
+
+```javascript
+const options = {
+  expectedInputs: [
+    {type: 'text', languages: ['en', 'ja', 'es']},
+    {type: 'image'},
+    {type: 'audio'},
+  ],
+  expectedOutputs: [{type: 'text', languages: ['en']}],
+};
+
+const available = await LanguageModel.availability(options);
+
+const session = await LanguageModel.create({
+  ...options,
+   initialPrompts: [
+    { role: 'system', content: 'You are a fine-art critique' }
+  ]
+});
+```
+
+```javascript
+const options = {
+  expectedInputs: [
+    {type: 'text', languages: ['en', 'ja', 'es']},
+    {type: 'image'},
+    {type: 'audio'},
+  ],
+  expectedOutputs: [{type: 'text', languages: ['en']}],
+};
+
+const available = await LanguageModel.availability(options);
+
+const session = await LanguageModel.create({
+  ...options,
+   initialPrompts: [
+    { role: 'system', content: 'You are a fine-art critique' },
+    { role: 'user', content: 'Is impressionism the best movement ever? Answer just yer or no' },
+    { role: 'assistant', content: 'No.'}
+  ]
+});
+```
+
+````
+
 <!-- aggiungere initial Prompts when create a session context -->
 <!-- aggiungere multimodal capabilities -->
 <!-- aggiungere discorso sessione -->
+<!-- aggiungere structured Output -->
