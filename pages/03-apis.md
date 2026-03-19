@@ -960,17 +960,6 @@ const response = await session.prompt('Is Monet an impressionist artist? Answer 
 ```
 
 ```javascript
-const options = {
-  expectedInputs: [
-    {type: 'text', languages: ['en', 'ja', 'es']},
-    {type: 'image'},
-    {type: 'audio'},
-  ],
-  expectedOutputs: [{type: 'text', languages: ['en']}],
-};
-
-const available = await LanguageModel.availability(options);
-
 const session = await LanguageModel.create({
   ...options,
    initialPrompts: [
@@ -993,17 +982,6 @@ const response = await session.prompt([{
 ```
 
 ```javascript
-const options = {
-  expectedInputs: [
-    {type: 'text', languages: ['en', 'ja', 'es']},
-    {type: 'image'},
-    {type: 'audio'},
-  ],
-  expectedOutputs: [{type: 'text', languages: ['en']}],
-};
-
-const available = await LanguageModel.availability(options);
-
 const session = await LanguageModel.create({
   ...options,
    initialPrompts: [
@@ -1028,17 +1006,6 @@ const response = await session.prompt([{
 ```
 
 ```javascript
-const options = {
-  expectedInputs: [
-    {type: 'text', languages: ['en', 'ja', 'es']},
-    {type: 'image'},
-    {type: 'audio'},
-  ],
-  expectedOutputs: [{type: 'text', languages: ['en']}],
-};
-
-const available = await LanguageModel.availability(options);
-
 const session = await LanguageModel.create({
   ...options,
    initialPrompts: [
