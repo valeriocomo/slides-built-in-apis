@@ -1029,6 +1029,32 @@ const response = await session.prompt([{
 }])
 ```
 
+```javascript
+const image = await (await fetch("impressionism-sol-levant.jpeg")).blob();
+const response = await session.prompt([{
+  role: 'user'
+  content: [
+    {
+      type: 'text',
+      value: `Express a fine-art critique about this image`,
+    },
+    { type: 'image', value: image },
+  ],
+}])
+console.log(response)
+
+const audioBuffer = functionThatGetAudioFromMic()
+const userResponse = await session.prompt([
+  {
+    role: "user",
+    content: [
+      { type: "text", value: "My response to your critique:" },
+      { type: "audio", value: audioBuffer },
+    ],
+  }
+]);
+```
+
 ````
 
 <!-- aggiungere initial Prompts when create a session context -->
