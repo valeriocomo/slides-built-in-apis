@@ -972,12 +972,12 @@ const session = await LanguageModel.create({
 const response = await session.prompt([{
   role: 'user'
   content: [
-  {
-    type: 'text',
-    value: `Here's one image. Notes: ${fileNotesInput.value}`,
-  },
-  { type: 'image', value: fileUpload.files[0] },
-],
+    {
+      type: 'text',
+      value: `Express a fine-art critique about this image`,
+    },
+    { type: 'image', value: fileUpload.files[0] },
+  ],
 }])
 ```
 
@@ -996,12 +996,12 @@ const canvas = document.querySelector("canvas");
 const response = await session.prompt([{
   role: 'user'
   content: [
-  {
-    type: 'text',
-    value: `Express a fine-art critique about this image`,
-  },
-  { type: 'image', value: canvas },
-],
+    {
+      type: 'text',
+      value: `Express a fine-art critique about this image`,
+    },
+    { type: 'image', value: canvas },
+  ],
 }])
 ```
 
@@ -1020,12 +1020,12 @@ const image = await (await fetch("impressionism-sol-levant.jpeg")).blob();
 const response = await session.prompt([{
   role: 'user'
   content: [
-  {
-    type: 'text',
-    value: `Express a fine-art critique about this image`,
-  },
-  { type: 'image', value: image },
-],
+    {
+      type: 'text',
+      value: `Express a fine-art critique about this image`,
+    },
+    { type: 'image', value: image },
+  ],
 }])
 ```
 
