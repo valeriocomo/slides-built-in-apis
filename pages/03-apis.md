@@ -396,7 +396,7 @@ layout: default
 |-------------|--------------------------------------------------------------------------------------------------------------------------|
 | tldr        | Riepilogo breve e diretto, fornisce una rapida panoramica dell'input |
 | teaser      | Riepilogo delle parti più interessanti o intriganti dell'input, progettato per invogliare il lettore a continuare la lettura. |
-| key points. | Riepilogo deii punti più importanti dall'input, presentandoli come elenco puntato.                   |
+| key points. | Riepilogo dei punti più importanti dall'input, presentandoli come elenco puntato.                   |
 | headline    | Riepilogo che contiene il punto principale dell'input in una singola frase, nel formato di un titolo di articolo. |
 
 ---
@@ -950,12 +950,12 @@ const session = await LanguageModel.create({
   ...options,
    initialPrompts: [
     { role: 'system', content: 'You are a fine-art critique' },
-    { role: 'user', content: 'Is impressionism the best movement ever? Answer just yer or no' },
+    { role: 'user', content: 'Is impressionism the best movement ever? Answer just yes or no' },
     { role: 'assistant', content: 'No.'}
   ]
 });
 
-const response = await session.prompt('Is Monet an impressionist artist? Answer just yer or no')
+const response = await session.prompt('Is Monet an impressionist artist? Answer just yes or no')
 //yes
 ```
 
@@ -964,7 +964,7 @@ const session = await LanguageModel.create({
   ...options,
    initialPrompts: [
     { role: 'system', content: 'You are a fine-art critique' },
-    { role: 'user', content: 'Is impressionism the best movement ever? Answer just yer or no' },
+    { role: 'user', content: 'Is impressionism the best movement ever? Answer just yes or no' },
     { role: 'assistant', content: 'No.'}
   ]
 });
@@ -986,7 +986,7 @@ const session = await LanguageModel.create({
   ...options,
    initialPrompts: [
     { role: 'system', content: 'You are a fine-art critique' },
-    { role: 'user', content: 'Is impressionism the best movement ever? Answer just yer or no' },
+    { role: 'user', content: 'Is impressionism the best movement ever? Answer just yes or no' },
     { role: 'assistant', content: 'No.'}
   ]
 });
@@ -1010,7 +1010,7 @@ const session = await LanguageModel.create({
   ...options,
    initialPrompts: [
     { role: 'system', content: 'You are a fine-art critique' },
-    { role: 'user', content: 'Is impressionism the best movement ever? Answer just yer or no' },
+    { role: 'user', content: 'Is impressionism the best movement ever? Answer just yes or no' },
     { role: 'assistant', content: 'No.'}
   ]
 });
@@ -1057,7 +1057,145 @@ const userResponse = await session.prompt([
 
 ````
 
-<!-- aggiungere initial Prompts when create a session context -->
-<!-- aggiungere multimodal capabilities -->
-<!-- aggiungere discorso sessione -->
+---
+layout: default
+---
+
+# Prompt API
+### Session Mgmt
+
+
+````md magic-move
+
+```javascript
+const languageModel = await LanguageModel.create({
+  initialPrompts: [{
+    role: 'system',
+    content: 'You are a helpful personal-finance assistant.'
+  }]
+});
+```
+
+```javascript
+const languageModel = await LanguageModel.create({
+  initialPrompts: [{
+    role: 'system',
+    content: 'You are a helpful personal-finance assistant.'
+  }]
+});
+// clone a session
+const s1 = await languageModel.clone();
+const s2 = await languageModel.clone();
+```
+
+```javascript
+const languageModel = await LanguageModel.create({
+  initialPrompts: [{
+    role: 'system',
+    content: 'You are a helpful personal-finance assistant.'
+  }]
+});
+// clone a session
+const s1 = await languageModel.clone();
+const s2 = await languageModel.clone();
+
+const r1 = s1.prompt('Is 1-ETF strategy a good strategy?')
+const r2 = s2.prompt('Talk me about the all-weather portfolio')
+```
+
+```javascript
+const languageModel = await LanguageModel.create({
+  initialPrompts: [{
+    role: 'system',
+    content: 'You are a helpful personal-finance assistant.'
+  }]
+});
+// clone a session
+const s1 = await languageModel.clone();
+const s2 = await languageModel.clone();
+
+const r1 = s1.prompt('Is 1-ETF strategy a good strategy?')
+const r2 = s2.prompt('Talk me about the all-weather portfolio')
+// contextWindow - contextUsage
+s1.contextUsage // 2471
+s2.contextUsage // 1484
+```
+
+```javascript
+const languageModel = await LanguageModel.create({
+  initialPrompts: [{
+    role: 'system',
+    content: 'You are a helpful personal-finance assistant.'
+  }]
+});
+// clone a session
+const s1 = await languageModel.clone();
+const s2 = await languageModel.clone();
+
+const r1 = s1.prompt('Is 1-ETF strategy a good strategy?')
+const r2 = s2.prompt('Talk me about the all-weather portfolio')
+// contextWindow - contextUsage
+s1.contextUsage // 2471
+s2.contextUsage // 1484
+
+s1.destroy();
+s2.destroy();
+```
+
+````
+
+---
+layout: default
+---
+
+# Prompt API
+### Structured Output
+
+````md magic-move
+
+```javascript
+const session = await LanguageModel.create({
+  ...options,
+   initialPrompts: [
+    { role: 'system', content: 'You are a fine-art critique. Answer just yes or no to my prompt' }
+  ]
+});
+```
+
+```javascript
+const session = await LanguageModel.create({
+  ...options,
+   initialPrompts: [
+    { role: 'system', content: 'You are a fine-art critique. Answer just yes or no to my prompt' }
+  ]
+});
+
+const result = await session.prompt('Is Monet an impressionist artist ever?')
+// "Yes."
+```
+
+```javascript
+const schema = {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "YesNoResponse",
+  "description": "An object that contains a yes/no answer",
+  "type": "object",
+  "properties": {
+    "answer": {
+      "type": "string",
+      "enum": ["yes", "no"],
+      "description": "Answer: yes or no"
+    }
+  },
+  "required": ["answer"],
+  "additionalProperties": false
+}
+
+const result = await session.prompt('Is Monet an impressionist artist ever?', { responseConstraint: schema })
+// '{"answer": "yes"}'
+```
+
+````
+
+
 <!-- aggiungere structured Output -->
