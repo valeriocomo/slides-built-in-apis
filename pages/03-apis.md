@@ -1197,6 +1197,10 @@ const result = await session.prompt('Is Monet an impressionist artist ever?', { 
 
 ````
 
+---
+layout: default
+---
+
 # Prompt API 
 ### Pro tip
 
