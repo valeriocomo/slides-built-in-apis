@@ -1197,5 +1197,31 @@ const result = await session.prompt('Is Monet an impressionist artist ever?', { 
 
 ````
 
+# Prompt API 
+### Pro tip
 
-<!-- aggiungere structured Output -->
+<v-clicks>
+
+- Non è supportato nei Web Worker
+
+- top-level window (no cross-origin)
+
+- configurazione permessi per iframe (cross-origin)
+
+</v-clicks>
+
+<v-after>
+
+```html
+<iframe src="https://cross-origin.valeriocomo.dev/" allow="language-model"></iframe>
+```
+
+</v-after>
+
+<!-- 
+
+layout: iframe
+url: https://chrome.dev/web-ai-demos/writer-rewriter-api-playground/
+allow: "writer,rewriter"
+
+-->
