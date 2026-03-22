@@ -1229,3 +1229,28 @@ url: https://chrome.dev/web-ai-demos/writer-rewriter-api-playground/
 allow: "writer,rewriter"
 
 -->
+
+---
+layout: section
+---
+
+# Proofreader API 
+
+---
+layout: default
+---
+
+# Proofreader API 
+### Setup
+
+```text
+chrome://flags/#optimization-guide-on-device-model
+````
+
+```text
+chrome://flags/#prompt-api-for-gemini-nano-multimodal-input
+````
+
+```text
+chrome://flags/#proofreader-api-for-gemini-nano
+````
