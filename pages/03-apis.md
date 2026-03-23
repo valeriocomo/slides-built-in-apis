@@ -89,6 +89,33 @@ backgroundSize: contain
 | Proofreader API        | ❌​              | ✅​           |
 
 ---
+layout: default
+---
+
+# Anatomia delle API
+## Security & Policy
+
+<v-clicks>
+
+- Non è supportate nei Web Worker
+
+- top-level window (no cross-origin)
+
+- configurazione permessi per iframe (cross-origin)
+
+</v-clicks>
+
+<v-after>
+
+```html
+<iframe src="https://cross-origin.valeriocomo.dev/" 
+  allow="summarizer,language-model,language-detector,writer,rewriter,proofreader">
+</iframe>
+```
+
+</v-after>
+
+---
 layout: image-right
 image: '/images/apis-hardware-req.avif'
 backgroundSize: contain
