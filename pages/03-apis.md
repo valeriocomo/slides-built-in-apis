@@ -602,31 +602,6 @@ for await (const chunk of stream) {
 ```
 
 ````
----
-layout: default
----
-
-# Writing Assistance API 
-## Writer API
-### Pro tip
-
-<v-clicks>
-
-- Non è supportato nei Web Worker
-
-- top-level window (no cross-origin)
-
-- configurazione permessi per iframe (cross-origin)
-
-</v-clicks>
-
-<v-after>
-
-```html
-<iframe src="https://cross-origin.valeriocomo.dev/" allow="writer"></iframe>
-```
-
-</v-after>
 
 ---
 layout: default
@@ -747,32 +722,6 @@ for await (const chunk of stream) {
 ```
 
 ````
----
-layout: default
----
-
-# Writing Assistance API 
-## Rewriter API
-### Pro tip
-
-<v-clicks>
-
-- Non è supportato nei Web Worker
-
-- top-level window (no cross-origin)
-
-- configurazione permessi per iframe (cross-origin)
-
-</v-clicks>
-
-<v-after>
-
-```html
-<iframe src="https://cross-origin.valeriocomo.dev/" allow="rewriter"></iframe>
-```
-
-</v-after>
-
 <!-- 
 
 layout: iframe
@@ -1179,31 +1128,6 @@ const result = await session.prompt('Is Monet an impressionist artist ever?', { 
 
 ````
 
----
-layout: default
----
-
-# Prompt API 
-### Pro tip
-
-<v-clicks>
-
-- Non è supportato nei Web Worker
-
-- top-level window (no cross-origin)
-
-- configurazione permessi per iframe (cross-origin)
-
-</v-clicks>
-
-<v-after>
-
-```html
-<iframe src="https://cross-origin.valeriocomo.dev/" allow="language-model"></iframe>
-```
-
-</v-after>
-
 <!-- 
 
 layout: iframe
@@ -1354,29 +1278,3 @@ const correction = await proofreader.proofread(
 ```
 
 ````
-
----
-layout: default
----
-
-# Proofreader API 
-### Pro tip
-
-<v-clicks>
-
-- Non è supportato nei Web Worker
-
-- top-level window (no cross-origin)
-
-- configurazione permessi per iframe (cross-origin)
-
-</v-clicks>
-
-
-<v-after>
-
-```html
-<iframe src="https://cross-origin.valeriocomo.dev/" allow="proofreader"></iframe>
-```
-
-</v-after>
