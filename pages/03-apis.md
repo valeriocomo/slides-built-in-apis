@@ -85,6 +85,27 @@ layout: default
 ---
 
 # Anatomia delle API
+## Desing API 
+
+<v-clicks>
+
+- ```.availabile()```
+
+- ```.create()```
+
+- ```.<action>()``` (promise-based)
+
+- ```.<action>Streaming()``` (stream-based)
+
+- ```.destroy()```
+
+</v-clicks>
+
+---
+layout: default
+---
+
+# Anatomia delle API
 ## Security & Policy
 
 <v-clicks>
