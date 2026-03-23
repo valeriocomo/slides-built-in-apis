@@ -47,12 +47,6 @@ backgroundSize: contain
 ## Stato delle API
 
 ---
-layout: section
----
-
-# Requisiti
-
----
 layout: default
 ---
 
