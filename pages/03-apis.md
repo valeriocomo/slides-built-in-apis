@@ -1,6 +1,6 @@
 ---
 layout: image
-image: '/images/apis-cover.jag'
+image: '/images/apis-cover.jpg'
 preload: true
 transition: slide-up
 ---
