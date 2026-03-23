@@ -120,6 +120,16 @@ layout: section
 # Translation API 
 
 ---
+layout: center
+---
+
+# Translation API 
+
+- Translator API
+
+- Language Detector API
+
+---
 layout: default
 ---
 
