@@ -157,7 +157,7 @@ const translatorCapabilities = await Translator.availability({
 
 ```javascript
 const translator = await Translator.create({
-  sourceLanguage: 'it'
+  sourceLanguage: 'it',
   targetLanguage: 'es',
 });
 ```
@@ -169,12 +169,12 @@ await translator.translate('Saluti da Corralejo');
 
 ```javascript
 const translatorCapabilities = await Translator.availability({
-  sourceLanguage: 'it'
+  sourceLanguage: 'it',
   targetLanguage: 'es',
 });
 
 const translator = await Translator.create({
-  sourceLanguage: 'it'
+  sourceLanguage: 'it',
   targetLanguage: 'es',
 });
 
@@ -274,32 +274,6 @@ for (const result of results) {
 ```
 
 ````
-
----
-layout: default
----
-
-# Translation API
-## Language Detector API
-### Security & Policy
-
-<v-clicks>
-
-- Non è supportato nei Service Worker
-
-- top-level window (no cross-origin)
-
-- configurazione permessi per iframe (cross-origin)
-
-</v-clicks>
-
-<v-after>
-
-```html
-<iframe src="https://cross-origin.valeriocomo.dev/" allow="language-detector"></iframe>
-```
-
-</v-after>
 
 ---
 layout: section
