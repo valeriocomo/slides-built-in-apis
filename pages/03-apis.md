@@ -69,6 +69,22 @@ layout: default
 | Prompt API             | Language Model  | Multimodal  |
 | Proofreader API        | Language Model  | Text → Text |
 
+---
+layout: image-right
+image: '/images/apis-hardware-req.avif'
+backgroundSize: contain
+---
+
+# Anatomia delle API
+## Requisiti hardware & software
+
+- GPU (+4GB RAM)
+
+- CPU (+16GB RAM & 4 CPU)
+
+- Linux,Windows,MacOS,ChromeOS
+
+- No Android & iOS
 
 ---
 layout: default
@@ -96,23 +112,6 @@ layout: default
 ```
 
 </v-after>
-
----
-layout: image-right
-image: '/images/apis-hardware-req.avif'
-backgroundSize: contain
----
-
-# Anatomia delle API
-## Requisiti hardware & software
-
-- GPU (+4GB RAM)
-
-- CPU (+16GB RAM & 4 CPU)
-
-- Linux,Windows,MacOS,ChromeOS
-
-- No Android & iOS
 
 ---
 layout: section
