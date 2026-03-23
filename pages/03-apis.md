@@ -282,6 +282,18 @@ layout: section
 # Writing Assistance API 
 
 ---
+layout: center
+---
+
+# Writing Assistance API 
+
+- Summarizer API
+
+- Writer API
+
+- Rewriter API
+
+---
 layout: default
 ---
 
@@ -392,7 +404,7 @@ layout: default
 |-------------|--------------------------------------------------------------------------------------------------------------------------|
 | tldr        | Riepilogo breve e diretto, fornisce una rapida panoramica dell'input |
 | teaser      | Riepilogo delle parti più interessanti o intriganti dell'input, progettato per invogliare il lettore a continuare la lettura. |
-| key points. | Riepilogo dei punti più importanti dall'input, presentandoli come elenco puntato.                   |
+| key points  | Riepilogo dei punti più importanti dall'input, presentandoli come elenco puntato.                   |
 | headline    | Riepilogo che contiene il punto principale dell'input in una singola frase, nel formato di un titolo di articolo. |
 
 ---
@@ -428,32 +440,6 @@ layout: default
 | headline    |  short     | 12 parole          |
 | headline    |  medium    | 17 parole          |
 | headline    |  long      | 22 parole          |
-
----
-layout: default
----
-
-# Translation API
-## Summarizer API
-### Security & Policy
-
-<v-clicks>
-
-- Non è supportato nei Web Worker
-
-- top-level window (no cross-origin)
-
-- configurazione permessi per iframe (cross-origin)
-
-</v-clicks>
-
-<v-after>
-
-```html
-<iframe src="https://cross-origin.valeriocomo.dev/" allow="summarizer"></iframe>
-```
-
-</v-after>
 
 ---
 layout: default
