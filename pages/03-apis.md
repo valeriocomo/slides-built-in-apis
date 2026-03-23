@@ -445,7 +445,7 @@ layout: default
 layout: default
 ---
 
-# Translation API 
+# Writing Assistance API 
 ## Summarizer API
 ### Pro tip
 
