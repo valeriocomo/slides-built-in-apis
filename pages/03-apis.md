@@ -72,24 +72,6 @@ layout: default
 
 ---
 layout: default
-backgroundSize: contain
----
-
-# Anatomia delle API
-## Supporto software
-
-| API                    | Mobile          | Desktop      |
-|------------------------|-----------------|--------------|
-| Translator API         | ❌​              | ✅​           |
-| Language Detector API  | ❌​              | ✅​           |
-| Summarizer API         | ❌​              | ✅​           |
-| Writer API             | ❌​              | ✅​           |
-| Rewriter API           | ❌​              | ✅​           |
-| Prompt API             | ❌​              | ✅​           |
-| Proofreader API        | ❌​              | ✅​           |
-
----
-layout: default
 ---
 
 # Anatomia delle API
@@ -122,11 +104,15 @@ backgroundSize: contain
 ---
 
 # Anatomia delle API
-## Supporto hardware
+## Requisiti hardware & software
 
 - GPU (+4GB RAM)
 
 - CPU (+16GB RAM & 4 CPU)
+
+- Linux,Windows,MacOS,ChromeOS
+
+- No Android & iOS
 
 ---
 layout: section
