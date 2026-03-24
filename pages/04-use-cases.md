@@ -92,3 +92,18 @@ const reviewSummary = await summarizer.summarize(reviews, {
 ```
 
 </v-click>
+
+---
+layout: default
+---
+
+# Altri casi d'uso
+### Modificare contenuti
+
+- migliorare creazione di contenuti (blog)
+
+- uso combinato di Translation API e Summarize API
+
+- supporto multilingua interattivo
+
+- supporto traduzioni
