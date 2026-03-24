@@ -85,7 +85,7 @@ layout: default
 ---
 
 # Anatomia delle API
-## Desing API 
+## Design API 
 
 <v-clicks>
 
