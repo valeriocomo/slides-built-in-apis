@@ -35,7 +35,12 @@ transition: fade
 ---
 
 ---
-src: ./pages/01-agenda.md
+src: ./pages/00-agenda.md
+transition: fade
+---
+
+---
+src: ./pages/01-why-this-talk.md
 transition: fade
 ---
 

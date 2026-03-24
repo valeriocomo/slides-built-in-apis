@@ -7,7 +7,7 @@ transition: slide-up
 
 <div class="slidev-layout h-full grid section">
     <div class="my-auto">
-        <h1>cosa è la built-in AI</h1>
+        <h1>built-in AI</h1>
     </div>
 </div>
 
