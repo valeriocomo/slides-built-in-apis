@@ -67,22 +67,25 @@ await translator.translate('Saluti da Corralejo');
 // "Saludos desde Corralejo"
 ```
 
-````
-
----
-layout: default
----
-
-# Translation API 
-## Translator API
-### Esempio con Stream
-
 ```javascript
+const translatorCapabilities = await Translator.availability({
+  sourceLanguage: 'it',
+  targetLanguage: 'es',
+});
+
+const translator = await Translator.create({
+  sourceLanguage: 'it',
+  targetLanguage: 'es',
+});
+
 const stream = translator.translateStreaming(longText);
+
 for await (const chunk of stream) {
   console.log(chunk);
 }
 ```
+
+````
 
 ---
 layout: default
