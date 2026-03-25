@@ -11,6 +11,8 @@ layout: default
 # Proofreader API 
 ### Setup
 
+Abilitare i seguenti flag
+
 ```text
 chrome://flags/#optimization-guide-on-device-model
 ```
