@@ -39,7 +39,6 @@ const available = await LanguageModel.availability({
 
 const session = await LanguageModel.create();
 
-// Prompt the model and wait for the whole result to come back.
 const result = await session.prompt('Write me a short poem!');
 console.log(result);
 
@@ -62,9 +61,7 @@ const available = await LanguageModel.availability({
 
 const session = await LanguageModel.create();
 
-// Prompt the model and wait for the whole result to come back.
 const result = await session.prompt('Write me a short poem!');
-console.log(result);
 ```
 
 
@@ -79,25 +76,6 @@ const available = await LanguageModel.availability({
 });
 
 const session = await LanguageModel.create();
-
-// Prompt the model and wait for the whole result to come back.
-const result = await session.prompt('Write me a short poem!');
-console.log(result);
-```
-
-```javascript
-const options = {
-  expectedInputs: [
-    {type: 'text', languages: ['en', 'ja', 'es']},
-    {type: 'image'},
-    {type: 'audio'},
-  ],
-  expectedOutputs: [{type: 'text', languages: ['en']}],
-};
-
-const available = await LanguageModel.availability(options);
-
-const session = await LanguageModel.create(options);
 ```
 
 ```javascript
@@ -157,7 +135,7 @@ const session = await LanguageModel.create({
 });
 
 const response = await session.prompt('Is Monet an impressionist artist? Answer just yes or no')
-//yes
+// Yes.
 ```
 
 ```javascript
