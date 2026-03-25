@@ -1,13 +1,13 @@
 ---
 layout: image
-image: '/images/built-in-apis-cover.png'
+image: '/images/cover-case-study.png'
 preload: true
 transition: slide-up
 ---
 
 <div class="slidev-layout h-full grid section">
     <div class="my-auto">
-        <h1>Casi di studio</h1>
+        <h1 style="color: black; background-color: white; margin: 110px; padding-left: 80px; padding-right: 80px">Casi di studio</h1>
     </div>
 </div>
 
