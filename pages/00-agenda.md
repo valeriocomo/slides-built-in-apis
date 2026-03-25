@@ -22,4 +22,4 @@ image: '/images/agenda.png'
 * built-in AI
 * anatomia delle API
 * case study
-* Q&A
+* wrap-up & Q&A
