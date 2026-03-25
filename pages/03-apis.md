@@ -1,13 +1,13 @@
 ---
 layout: image
-image: '/images/apis-cover.jpg'
+image: '/images/cover-apis-anatomy.png'
 preload: true
 transition: slide-up
 ---
 
 <div class="slidev-layout h-full grid section">
     <div class="my-auto">
-        <h1>anatomia delle API</h1>
+        <h1 style="color: black; background-color: white; margin: 110px; padding-left: 14px; padding-right: 14px">anatomia delle API</h1>
     </div>
 </div>
 
