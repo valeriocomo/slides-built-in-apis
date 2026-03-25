@@ -1,6 +1,6 @@
 ---
 layout: image
-image: '/images/why-this-talk.jpg'
+image: '/images/cover-why-this-talk.jpg'
 preload: true
 transition: slide-up
 ---
