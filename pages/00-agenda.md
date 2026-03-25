@@ -18,7 +18,8 @@ image: '/images/agenda.png'
 
 # agenda
 
-* cosa é la built-in AI
+* perché questo talk
+* built-in AI
 * anatomia delle API
 * case study
-* Q&A
+* wrap-up & Q&A

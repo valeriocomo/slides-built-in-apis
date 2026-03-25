@@ -1,13 +1,13 @@
 ---
 layout: image
-image: '/images/built-in-apis-cover.png'
+image: '/images/cover-built-in-ai.jpg'
 preload: true
 transition: slide-up
 ---
 
 <div class="slidev-layout h-full grid section">
     <div class="my-auto">
-        <h1>cosa è la built-in AI</h1>
+        <h1 style="color: black; background-color: white; margin: 110px; padding-left: 140px; padding-right: 140px">built-in AI</h1>
     </div>
 </div>
 
