@@ -105,7 +105,7 @@ const summarizer = await Summarizer.create({
 });
 
 const longText = document.querySelector('article').innerHTML;
-const stream = await summarizer.summarizeStream(longText, {
+const stream = await summarizer.summarizeStreaming(longText, {
   context: 'This article is intended for readers who are familiar with American professional basketball',
 });
 
