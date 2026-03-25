@@ -60,9 +60,11 @@ transition: fade
 ---
 
 ---
+src: ./pages/05-wrap-up.md
+transition: fade
+---
 
-# Conclusioni
-
-- Le Built‑in APIs di Chrome offrono un ecosistema rapido e privato per LLM.
-- La combinazione di **Prompt API**, **Summarizer**, **Translator**, e altre rende semplice aggiungere AI a web‑app.
-- Le best practices garantiscono performance e sicurezza.
+---
+src: ./pages/06-qa.md
+transition: fade
+---
