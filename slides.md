@@ -8,14 +8,14 @@ drawings:
   persist: false
 transition: slide-left
 layout: intro-image
-image: '/images/cover.jpg'
+image: '/images/cover-talk.png'
 fonts:
   sans: Roboto
   serif: Roboto Serif
   mono: Roboto Mono
 ---
 
-# Introduzione alle Built‑in APIs
+# Introduzione alle Built‑in AI APIs
 
 <div class="absolute bottom-10">
   <span class="font-700">
