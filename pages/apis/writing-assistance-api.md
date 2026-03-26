@@ -33,10 +33,6 @@ layout: default
 
 ```javascript
 const availability = await Summarizer.availability();
-// 'available'
-// 'unavailable'
-// 'downloadable'
-// 'downloading'
 ```
 
 ```javascript
