@@ -226,7 +226,7 @@ layout: default
 const availability = await Writer.availability();
 ```
 
-```javascript
+<!-- ```javascript
 const writer = await Writer.create();
 ```
 
@@ -237,7 +237,7 @@ const writer = await Writer.create({
   format: 'plain-text',  // plain-text | markdown
   length: 'medium', // short | medium | long
 });
-```
+``` -->
 
 ```javascript
 const writer = await Writer.create({
@@ -354,44 +354,6 @@ layout: default
 
 ```javascript
 'Rewriter' in self
-```
-
-```javascript
-const availability = await Rewriter.availability();
-```
-
-```javascript
-const rewriter = await Rewriter.create();
-```
-
-```javascript
-const rewriter = await Rewriter.create({
-  sharedContext: 'These are request of rephrasing a sentence.',
-  tone: 'casual', // neutral | formal | casual
-  format: 'plain-text',  // plain-text | markdown
-  length: 'medium', // short | medium | long
-});
-```
-
-```javascript
-const rewriter = await Rewriter.create({
-  sharedContext: 'These are request of rephrasing a sentence.',
-  tone: 'casual', // neutral | formal | casual
-  format: 'plain-text',  // plain-text | markdown
-  length: 'medium', // short | medium | long
-  expectedInputLanguages: ["en", "ja", "es"],
-  expectedContextLanguages: ["en", "ja", "es"],
-  outputLanguage: "en",
-});
-```
-
-```javascript
-const result = await rewriter.rewrite(
-  text,
-  {
-    context: "Use a polite tone",
-  },
-);
 ```
 
 ```javascript
