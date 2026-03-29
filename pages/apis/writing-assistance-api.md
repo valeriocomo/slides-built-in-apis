@@ -33,10 +33,6 @@ layout: default
 
 ```javascript
 const availability = await Summarizer.availability();
-// 'available'
-// 'unavailable'
-// 'downloadable'
-// 'downloading'
 ```
 
 ```javascript
@@ -230,7 +226,7 @@ layout: default
 const availability = await Writer.availability();
 ```
 
-```javascript
+<!-- ```javascript
 const writer = await Writer.create();
 ```
 
@@ -241,7 +237,7 @@ const writer = await Writer.create({
   format: 'plain-text',  // plain-text | markdown
   length: 'medium', // short | medium | long
 });
-```
+``` -->
 
 ```javascript
 const writer = await Writer.create({
@@ -332,71 +328,9 @@ layout: default
 
 # Writing Assistance API 
 ## Rewriter API
-### Setup
-
-Abilitare i seguenti flag
-
-```text
-chrome://flags/#optimization-guide-on-device-model
-```
-```text
-chrome://flags/#prompt-api-for-gemini-nano-multimodal-input
-```
-```text
-chrome://flags/#writer-api-for-gemini-nano
-```
-
----
-layout: default
----
-
-# Writing Assistance API 
-## Rewriter API
 ### Esempio
 
 ````md magic-move
-
-```javascript
-'Rewriter' in self
-```
-
-```javascript
-const availability = await Rewriter.availability();
-```
-
-```javascript
-const rewriter = await Rewriter.create();
-```
-
-```javascript
-const rewriter = await Rewriter.create({
-  sharedContext: 'These are request of rephrasing a sentence.',
-  tone: 'casual', // neutral | formal | casual
-  format: 'plain-text',  // plain-text | markdown
-  length: 'medium', // short | medium | long
-});
-```
-
-```javascript
-const rewriter = await Rewriter.create({
-  sharedContext: 'These are request of rephrasing a sentence.',
-  tone: 'casual', // neutral | formal | casual
-  format: 'plain-text',  // plain-text | markdown
-  length: 'medium', // short | medium | long
-  expectedInputLanguages: ["en", "ja", "es"],
-  expectedContextLanguages: ["en", "ja", "es"],
-  outputLanguage: "en",
-});
-```
-
-```javascript
-const result = await rewriter.rewrite(
-  text,
-  {
-    context: "Use a polite tone",
-  },
-);
-```
 
 ```javascript
 const availability = await Rewriter.availability();

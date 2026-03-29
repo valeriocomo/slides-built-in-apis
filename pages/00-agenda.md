@@ -16,7 +16,7 @@ layout: image-right
 image: '/images/agenda.png'
 ---
 
-# agenda
+# Agenda
 
 * perché questo talk
 * built-in AI

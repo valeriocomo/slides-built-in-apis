@@ -58,7 +58,7 @@ transition: none
 
 <v-clicks>
 
-- **processing in locale di dati sensibili**
+- **processing in locale**
 
 - **UX reattiva**
 
@@ -77,14 +77,14 @@ layout: image-right
 image: '/images/hybrid-client-server.png'
 ---
 
-# app ibride
+# App ibride
 ## client-side + server-side
 
 <v-clicks>
 
-- **gestione della complessità**
+- **ottimizzazione uso AI**
 
-- **migliora la resilienza**
+- **resilienza migliorata**
 
 - **meccanismi di fallback**
 

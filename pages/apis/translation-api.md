@@ -95,7 +95,7 @@ layout: default
 ## Translator API
 ### Pro tip
 
-Mostra sempre un loader nella UI quando usi il metodo ```.translate```
+Mostrare sempre un loader nella UI quando usi il metodo ```.translate```
 
 
 ---

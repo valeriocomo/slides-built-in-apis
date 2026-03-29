@@ -25,7 +25,7 @@ image: '/images/frontier-portrait.png'
 
 <v-clicks>
 
-- continuità
+- evoluzione
 
 - esplorazione
 
