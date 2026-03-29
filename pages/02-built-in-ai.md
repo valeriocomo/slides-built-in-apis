@@ -77,7 +77,7 @@ layout: image-right
 image: '/images/hybrid-client-server.png'
 ---
 
-# app ibride
+# App ibride
 ## client-side + server-side
 
 <v-clicks>
