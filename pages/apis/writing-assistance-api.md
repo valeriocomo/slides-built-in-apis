@@ -328,33 +328,9 @@ layout: default
 
 # Writing Assistance API 
 ## Rewriter API
-### Setup
-
-Abilitare i seguenti flag
-
-```text
-chrome://flags/#optimization-guide-on-device-model
-```
-```text
-chrome://flags/#prompt-api-for-gemini-nano-multimodal-input
-```
-```text
-chrome://flags/#writer-api-for-gemini-nano
-```
-
----
-layout: default
----
-
-# Writing Assistance API 
-## Rewriter API
 ### Esempio
 
 ````md magic-move
-
-```javascript
-'Rewriter' in self
-```
 
 ```javascript
 const availability = await Rewriter.availability();
