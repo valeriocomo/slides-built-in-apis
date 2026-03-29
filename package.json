@@ -6,7 +6,8 @@
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open",
-    "export": "slidev export"
+    "export": "slidev export",
+    "show:webday2026": "npm exec -c 'slidev \"slides-webday2026.md\" --port 3030 --remote'"
   },
   "dependencies": {
     "@iconify-json/skill-icons": "^1.2.3",
