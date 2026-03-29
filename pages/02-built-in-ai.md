@@ -82,9 +82,9 @@ image: '/images/hybrid-client-server.png'
 
 <v-clicks>
 
-- **gestione della complessità**
+- **ottimizzazione uso AI**
 
-- **migliora la resilienza**
+- **resilienza migliorata**
 
 - **meccanismi di fallback**
 
