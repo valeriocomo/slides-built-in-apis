@@ -29,7 +29,7 @@ layout: default
 # Editoria
 ### Generare sintesi
 
-- genera un riassunto tramite Summarize API
+- usa Summarize API
 
 - possibilità di generare *key-points* o *tldr* 
 
@@ -98,7 +98,7 @@ layout: default
 ---
 
 # Altri casi d'uso
-### Modificare contenuti
+### Creazione contenuti
 
 - migliorare creazione di contenuti (blog)
 

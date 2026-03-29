@@ -58,7 +58,7 @@ transition: none
 
 <v-clicks>
 
-- **processing in locale di dati sensibili**
+- **processing in locale**
 
 - **UX reattiva**
 
