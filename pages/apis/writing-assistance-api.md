@@ -27,19 +27,6 @@ layout: default
 ````md magic-move
 
 ```javascript
-'Summarizer' in self
-// true
-```
-
-```javascript
-const availability = await Summarizer.availability();
-```
-
-```javascript
-const summarizer = await Summarizer.create();
-```
-
-```javascript
 const summarizer = await Summarizer.create({
   type: 'key-points', // key-points | tldr | teaser | headline
   format: 'markdown', // markdown | plainText
