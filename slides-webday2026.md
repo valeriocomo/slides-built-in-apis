@@ -17,6 +17,11 @@ fonts:
 ---
 
 ---
+layout: image
+image: '/images/kudos-webday2026.png'
+---
+
+---
 src: ./pages/00-about-me.md
 transition: fade
 ---
@@ -49,11 +54,6 @@ transition: fade
 ---
 src: ./pages/05-wrap-up.md
 transition: fade
----
-
----
-layout: image
-image: '/images/kudos-webday2026.png'
 ---
 
 ---
