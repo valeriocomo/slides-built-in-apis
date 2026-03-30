@@ -206,27 +206,8 @@ layout: default
 ````md magic-move
 
 ```javascript
-'Writer' in self
-```
-
-```javascript
 const availability = await Writer.availability();
-```
 
-<!-- ```javascript
-const writer = await Writer.create();
-```
-
-```javascript
-const writer = await Writer.create({
-  sharedContext: 'This is an email asking about the price of a car.',
-  tone: 'casual', // neutral | formal | casual
-  format: 'plain-text',  // plain-text | markdown
-  length: 'medium', // short | medium | long
-});
-``` -->
-
-```javascript
 const writer = await Writer.create({
   sharedContext: 'This is an email asking about the price of a car.',
   tone: 'casual', // neutral | formal | casual
@@ -236,6 +217,13 @@ const writer = await Writer.create({
   expectedContextLanguages: ["en", "ja", "es"],
   outputLanguage: "en",
 });
+
+const result = await writer.write(
+  "An inquiry to a car dealer about the price of a car in stock.",
+  {
+    context: "I'm a new customer",
+  },
+);
 ```
 
 ```javascript
